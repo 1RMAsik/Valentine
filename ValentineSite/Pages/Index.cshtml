@@ -1,0 +1,68 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Валентинка";
+}
+
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-image: url('https://w.forfun.com/fetch/33/3361ae17c665883af2d53ba3f12f18f6.jpeg');
+        background-size: cover;
+        font-family: Arial, sans-serif;
+    }
+
+    #proposal {
+        margin-bottom: 2em;
+        font-size: 2em;
+        text-align: center;
+        font-style: italic;
+        font-weight: bold;
+        color: white
+    }
+
+    #buttons {
+        display: flex;
+        justify-content: center;
+        gap: 2em;
+        position: relative;
+        
+    }
+
+    #yesButton, #noButton {
+        position: relative;
+        transition: transform 0.5s;
+        background-color: lightpink;
+        color: white;
+    }
+
+    #yesButton:hover, #noButton:hover{
+        background-color: deeppink;
+    }
+
+    p {
+        background-color: lightpink;
+        border-radius: 8em;
+       
+    }
+</style>
+<div id="proposal">
+    <p>Будешь ли ты моей валентинкой?</p>
+    <img src="https://i.pinimg.com/originals/ed/c1/6b/edc16bb1f9f76592545d9c66bc11a5e7.gif" alt="Cute gif">
+</div>
+<div id="buttons">
+    <button id="yesButton" class="btn" onclick="location.href='/Thanks'">Да</button>
+    <button id="noButton" class="btn">Нет</button>
+</div>
+
+<script>
+    var noButton = document.getElementById('noButton');
+    noButton.onmouseover = function() {
+        this.style.transform = 'translate(' + (Math.random() * 400 - 100) + 'px, ' + (Math.random() * 00 - 100) + 'px)';
+    };
+</script>
